@@ -68,7 +68,7 @@ int Labwork3::Task1()
 	Task1InputHandling(A, B);
 
 	TwoValueTuple<int, double> t = Task1main(A, B);
-	cout << "\nB can fit in A " << t.A << " times\nWith " << t.B << "of A remaining\n";
+	cout << "\nB can fit in A " << t.A << " times\nWith " << t.B << " of A remaining\n";
 
 	return NO_EXCEPTION
 }
