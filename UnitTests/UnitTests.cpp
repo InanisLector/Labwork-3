@@ -85,7 +85,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = true;
+			bool validation = tuple.A == 19;
+			validation &= fabs(tuple.B - 465.99173) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -96,7 +97,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = true;
+			bool validation = tuple.A == 8;
+			validation &= fabs(tuple.B - 139.15904) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -107,7 +109,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = true;
+			bool validation = tuple.A == 4;
+			validation &= fabs(tuple.B - 53.6) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -118,7 +121,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = true;
+			bool validation = tuple.A == 9;
+			validation &= fabs(tuple.B - 502.57812) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -129,7 +133,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = true;
+			bool validation = tuple.A == 11;
+			validation &= fabs(tuple.B - 110) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
