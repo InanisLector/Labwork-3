@@ -166,8 +166,8 @@ TwoValueTuple<int, double> Labwork3::Task2main(double P, double M) // I could de
 {
 	P = P * 0.01 + 1;
 	
-	int day = 0;
-	double S = 0;
+	int day = 1;
+	double S = 10;
 	for (double distanceTraveledToday = 10; S <= M; distanceTraveledToday *= P) {
 		S += distanceTraveledToday;
 		day++;
