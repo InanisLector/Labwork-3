@@ -1,7 +1,7 @@
 #include "Labwork3.h"
 #include <iostream>
-#define NO_EXCEPTION 0x0000;
-#define INVALID_INPUT_EXCEPTION -0x0001;
+#define NO_EXCEPTION 0x0000
+#define INVALID_INPUT_EXCEPTION -0x0001
 
 using namespace std;
 
@@ -45,7 +45,7 @@ int Labwork3::TaskSelectionInputHandling(int& n)
 	while (TaskSelectionInputN(n))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::TaskSelectionInputN(int& n)
@@ -54,8 +54,8 @@ int Labwork3::TaskSelectionInputN(int& n)
 	cin >> n;
 
 	if (n < 1 || n > 5)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 #pragma endregion
@@ -70,7 +70,7 @@ int Labwork3::Task1()
 	TwoValueTuple<int, double> t = Task1main(A, B);
 	cout << "\nB can fit in A " << t.A << " times\nWith " << t.B << " of A remaining\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task1InputHandling(double& A, double& B)
@@ -81,7 +81,7 @@ int Labwork3::Task1InputHandling(double& A, double& B)
 	while (Task1InputB(B))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task1InputA(double& A)
@@ -90,8 +90,8 @@ int Labwork3::Task1InputA(double& A)
 	cin >> A;
 
 	if (A < 0)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task1InputB(double& B)
@@ -100,8 +100,8 @@ int Labwork3::Task1InputB(double& B)
 	cin >> B;
 
 	if (B <= 0)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 TwoValueTuple<int, double> Labwork3::Task1main(double A, double B)
@@ -128,7 +128,7 @@ int Labwork3::Task2()
 	TwoValueTuple<int, double> t = Task2main(P, M);
 	cout << "\nSkier overdid the goal day " << t.A << " \nWith " << t.B << "km\n";
 	
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task2InputHandling(double& P, double& M)
@@ -139,7 +139,7 @@ int Labwork3::Task2InputHandling(double& P, double& M)
 	while (Task2InputM(M))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task2InputP(double& P)
@@ -148,8 +148,8 @@ int Labwork3::Task2InputP(double& P)
 	cin >> P;
 
 	if (P < 0 || P > 50)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task2InputM(double& M)
@@ -158,8 +158,8 @@ int Labwork3::Task2InputM(double& M)
 	cin >> M;
 
 	if (M < 0)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 TwoValueTuple<int, double> Labwork3::Task2main(double P, double M) // I could deal with overflow, but it gets clunky quickly
@@ -188,7 +188,7 @@ int Labwork3::Task3()
 	TwoValueTuple<int, double> t = Task3main(A);
 	cout << "\nWith K = " << t.A << "\nLongest distance under A is " << t.B << "\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task3InputHandling(double& A)
@@ -196,7 +196,7 @@ int Labwork3::Task3InputHandling(double& A)
 	while (Task3InputA(A))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task3InputA(double& A)
@@ -205,8 +205,8 @@ int Labwork3::Task3InputA(double& A)
 	cin >> A;
 
 	if (A <= 1)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 TwoValueTuple<int, double> Labwork3::Task3main(double A)
@@ -234,8 +234,8 @@ int Labwork3::Task4()
 	Task4InputHandling(N);
 
 	cout << endl << Task4main(N) << endl;
-
-	return NO_EXCEPTION
+	
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task4InputHandling(int& N)
@@ -243,7 +243,7 @@ int Labwork3::Task4InputHandling(int& N)
 	while (Task4InputN(N))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task4InputN(int& N)
@@ -252,8 +252,8 @@ int Labwork3::Task4InputN(int& N)
 	cin >> N;
 
 	if (N <= 0)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task4main(int N)
@@ -278,7 +278,7 @@ int Labwork3::Task5()
 
 	cout << endl << Task5main(N) << endl;
 	
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task5InputHandling(int& N)
@@ -286,7 +286,7 @@ int Labwork3::Task5InputHandling(int& N)
 	while (Task5InputN(N))
 		cout << "Invalid input\n";
 
-	return NO_EXCEPTION
+	return NO_EXCEPTION;
 }
 
 int Labwork3::Task5InputN(int& N)
@@ -295,8 +295,8 @@ int Labwork3::Task5InputN(int& N)
 	cin >> N;
 
 	if (N <= 0)
-		return INVALID_INPUT_EXCEPTION
-	return NO_EXCEPTION
+		return INVALID_INPUT_EXCEPTION;
+	return NO_EXCEPTION;
 }
 
 bool Labwork3::Task5main(int N)
