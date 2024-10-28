@@ -1,5 +1,6 @@
 #include "Labwork3.h"
 #include <iostream>
+#include <iomanip>
 #define NO_EXCEPTION 0x0000
 #define INVALID_INPUT_EXCEPTION -0x0001
 
@@ -127,6 +128,7 @@ int Labwork3::Task2()
 
 	TwoValueTuple<int, double> t = Task2main(P, M);
 	cout << "\nSkier overdid the goal day " << t.A << " \nWith " << t.B << "km\n";
+	cout << fixed << setprecision(5) << t.B;
 	
 	return NO_EXCEPTION;
 }
@@ -166,8 +168,8 @@ TwoValueTuple<int, double> Labwork3::Task2main(double P, double M) // I could de
 {
 	P = P * 0.01 + 1;
 	
-	int day = 1;
-	double S = 10;
+	int day = 0;
+	double S = 0;
 	for (double distanceTraveledToday = 10; S <= M; distanceTraveledToday *= P) {
 		S += distanceTraveledToday;
 		day++;

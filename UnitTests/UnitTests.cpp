@@ -13,12 +13,12 @@ namespace UnitTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			double A = 10;
+			double A = 4;
 			double B = 3;
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task1main(A, B);
 
-			bool validation = tuple.A == 3;
+			bool validation = tuple.A == 1;
 			validation &= fabs(tuple.B - 1) < EPSILON;
 
 			Assert::IsTrue(validation);
@@ -85,8 +85,8 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = tuple.A == 19;
-			validation &= fabs(tuple.B - 465.99173) < EPSILON;
+			bool validation = tuple.A == 18;
+			validation &= fabs(tuple.B - 455.99173) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -98,19 +98,19 @@ namespace UnitTests
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
 			bool validation = tuple.A == 8;
-			validation &= fabs(tuple.B - 139.15904) < EPSILON;
+			validation &= fabs(tuple.B - 164.99085) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
 
 		TEST_METHOD(TestMethod3) {
 			double P = 40;
-			double M = 42;
+			double M = 23;
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = tuple.A == 4;
-			validation &= fabs(tuple.B - 53.6) < EPSILON;
+			bool validation = tuple.A == 2;
+			validation &= fabs(tuple.B - 24) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -121,20 +121,20 @@ namespace UnitTests
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = tuple.A == 9;
-			validation &= fabs(tuple.B - 502.57812) < EPSILON;
+			bool validation = tuple.A == 8;
+			validation &= fabs(tuple.B - 492.57812) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
 
 		TEST_METHOD(TestMethod5) {
 			double P = 0;
-			double M = 100;
+			double M = 9;
 
 			TwoValueTuple<int, double> tuple = Labwork3::Task2main(P, M);
 
-			bool validation = tuple.A == 11;
-			validation &= fabs(tuple.B - 110) < EPSILON;
+			bool validation = tuple.A == 1;
+			validation &= fabs(tuple.B - 10) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -181,11 +181,11 @@ namespace UnitTests
 		}
 
 		TEST_METHOD(TestMethod5) {
-			double A = 99;
+			double A = 1.1;
 			TwoValueTuple<int, double> tuple = Labwork3::Task3main(A);
 
-			bool validation = tuple.A == 103;
-			validation &= fabs(tuple.B - 98.7736) < EPSILON;
+			bool validation = tuple.A == 1;
+			validation &= fabs(tuple.B - 0.5) < EPSILON;
 
 			Assert::IsTrue(validation);
 		}
@@ -207,24 +207,24 @@ namespace UnitTests
 		}
 
 		TEST_METHOD(TestMethod4) {
-			int N = 785412;
-			Assert::AreEqual(Labwork3::Task4main(N), 214587);
+			int N = 10;
+			Assert::AreEqual(Labwork3::Task4main(N), 1);
 		}
 
 		TEST_METHOD(TestMethod5) {
-			int N = 10;
-			Assert::AreEqual(Labwork3::Task4main(N), 1);
+			int N = 0;
+			Assert::AreEqual(Labwork3::Task4main(N), 0);
 		}
 	};
 	TEST_CLASS(Task5UnitTests) {
 		TEST_METHOD(TestMethod1) {
-			int N = 13;
-			Assert::IsTrue(Labwork3::Task5main(N));
+			int N = 10945;
+			Assert::IsFalse(Labwork3::Task5main(N));
 		}
 
 		TEST_METHOD(TestMethod2) {
-			int N = 15;
-			Assert::IsFalse(Labwork3::Task5main(N));
+			int N = 6765;
+			Assert::IsTrue(Labwork3::Task5main(N));
 		}
 
 		TEST_METHOD(TestMethod3) {
@@ -233,12 +233,12 @@ namespace UnitTests
 		}
 
 		TEST_METHOD(TestMethod4) {
-			int N = 10946;
+			int N = 2;
 			Assert::IsTrue(Labwork3::Task5main(N));
 		}
 
 		TEST_METHOD(TestMethod5) {
-			int N = 6765;
+			int N = 1;
 			Assert::IsTrue(Labwork3::Task5main(N));
 		}
 	};
